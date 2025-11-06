@@ -31,7 +31,7 @@ radio.openWritingPipe(pipes[0])
 radio.printDetails()
 
 # Message to send
-sendMessage = list("Hi..Arduino UNO")
+sendMessage = [ord(c) for c in "Hi..Arduino UNO"]
 while len(sendMessage) < 32:
     sendMessage.append(0)
 
